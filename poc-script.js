@@ -1,5 +1,5 @@
 
-const apiKey = "df3ac78c2aa3f2752f08bfd1e0cf427b";
+const apiKey = "api-key";
 
 // Wait for Alloy to load (since Adobe Launch injects it async)
 function waitForAlloy(callback, interval = 100, retries = 50) {
@@ -40,7 +40,7 @@ function sendWeatherDataToAEP() {
           renderDecisions: true,
           personalization: {
             surfaces: [
-              "web://gbedekar489.github.io/weather/multiple-json.html#offerContainer"
+              "web://lovakumart.github.io/weather/multiple-json.html#offerContainer"
             ]
           },
           xdm: {
