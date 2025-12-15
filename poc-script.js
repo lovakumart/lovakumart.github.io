@@ -1,5 +1,5 @@
 
-const apiKey = "api-key";
+const apiKey = "fa25d7cd37524662eff804caa6e1ceb4";
 
 // Wait for Alloy to load (since Adobe Launch injects it async)
 function waitForAlloy(callback, interval = 100, retries = 50) {
