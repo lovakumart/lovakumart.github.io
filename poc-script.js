@@ -1,5 +1,5 @@
 
-const apiKey = "<your_openweather_api_key";
+const apiKey = "df3ac78c2aa3f2752f08bfd1e0cf427b";
 
 // Wait for Alloy to load (since Adobe Launch injects it async)
 function waitForAlloy(callback, interval = 100, retries = 50) {
