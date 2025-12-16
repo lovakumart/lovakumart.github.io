@@ -61,9 +61,7 @@ function sendWeatherDataToAEP() {
           offerDiv.innerHTML = "";
 
           if (!allOffers.length) {
-            offerDiv.innerHTML = "<h2>Protect Your Skin This Summer</h2>   
-	<p>High temperatures mean high UV risk. Get <strong>20% off</strong> our dermatologist-recommended sunscreens and skin protection kits.</p>   
-	<p>Offer valid this week only for areas with temperatures over 90°F.</p> <button> Shop Sunscreen</button>";
+            offerDiv.innerHTML = "<h2>Protect Your Skin This Summer</h2><p>High temperatures mean high UV risk. Get <strong>20% off</strong> our dermatologist-recommended sunscreens and skin protection kits.</p><p>Offer valid this week only for areas with temperatures over 90°F.</p>";
             return;
           }
 
