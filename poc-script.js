@@ -57,13 +57,13 @@ function sendWeatherDataToAEP() {
             allOffers.push(...(p.items || []));
           });
 
-          const offer = "<div><h2 style='color: #e65100;'>Protect Your Skin This Summer</h2><p>High temperatures mean high UV risk. Get <strong>20% off</strong> our dermatologist-recommended sunscreens and skin protection kits.</p><p>Offer valid this week only for areas with temperatures over 90°F.</p></div>";
           const offerDiv = document.getElementById("offerContainer");
           offerDiv.innerHTML = "";
 
-console.log(offer); 
-
-allOffers = offer;         
+          if (!allOffers.length) {
+            offerDiv.innerHTML = "<p>No offers returned.</p>";
+            return;
+          }
 
           allOffers.forEach(item => {
   const contents = item.data?.content || [];
