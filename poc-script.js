@@ -57,6 +57,11 @@ function sendWeatherDataToAEP() {
             allOffers.push(...(p.items || []));
           });
 
+          allOffers[0] = "<div data-tags='weather Offer1 skincare sunscreen' style='border: 1px solid #e0e0e0; padding: 1.5rem; border-radius: 10px; background-color: #fff3e0;'>   
+				<h2 style='color: #e65100;'>Protect Your Skin This Summer</h2>   
+				<p>High temperatures mean high UV risk. Get <strong>20% off</strong> our dermatologist-recommended sunscreens and skin protection kits.</p>   
+				<p>Offer valid this week only for areas with temperatures over 90°F.</p> <button  class='ajo-cta'> Shop Sunscreen</button>   
+			</div>"
           const offerDiv = document.getElementById("offerContainer");
           offerDiv.innerHTML = "";
 
