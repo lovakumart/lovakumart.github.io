@@ -60,11 +60,16 @@ function sendWeatherDataToAEP() {
           const offerDiv = document.getElementById("offerContainer");
           offerDiv.innerHTML = "";
 
+	  console.log("Number of offers:", allOffers.length);
+
           if (!allOffers.length) {
             offerDiv.innerHTML = "<p>No offers returned.</p>";
             return;
           }
 
+	console.log("Text 1:", item._delta);
+	console.log("Text 2:", item._delta.offerDetails);
+	console.log("Text 3:", item._delta.offerDetails.offerText);
 
 	allOffers.forEach(item => {
 	  const html = item._delta?.offerDetails?.offerText || "";
