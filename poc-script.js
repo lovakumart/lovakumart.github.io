@@ -67,11 +67,8 @@ function sendWeatherDataToAEP() {
             return;
           }
 
-	console.log("Text 1:", item._delta);
-	console.log("Text 2:", item._delta.offerDetails);
-	console.log("Text 3:", item._delta.offerDetails.offerText);
-
 	allOffers.forEach(item => {
+	  console.log("Text 3:", item._delta.offerDetails.offerText);
 	  const html = item._delta?.offerDetails?.offerText || "";
 	  const decoded = decodeHtml(html);
 
