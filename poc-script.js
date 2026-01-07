@@ -65,18 +65,17 @@ function sendWeatherDataToAEP() {
             return;
           }
 
+
 	allOffers.forEach(item => {
-  		const html = item._delta?.offerDetails?.offerText || "";
-  		const decoded = decodeHtml(html);
+	  const html = item._delta?.offerDetails?.offerText || "";
+	  const decoded = decodeHtml(html);
 
-  		const wrapper = document.createElement("div");
-  		wrapper.className = "offer";
-  		wrapper.innerHTML = decoded;
+	  const wrapper = document.createElement("div");
+	  wrapper.className = "offer";
+	  wrapper.innerHTML = decoded;
 
-  		offerDiv.appendChild(wrapper);
+	  offerDiv.appendChild(wrapper);
 	});
-
-});
 
         }).catch(err => {
           console.error("❌ Personalization failed:", err);
