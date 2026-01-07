@@ -70,14 +70,15 @@ function sendWeatherDataToAEP() {
           }
 
 	allOffers.forEach(item => {
-	  const html = item._delta?.offerDetails?.offerText || "";
-	  const decoded = decodeHtml(html);
-
-	  const wrapper = document.createElement("div");
-	  wrapper.className = "offer";
-	  wrapper.innerHTML = decoded;
-
-	  offerDiv.appendChild(wrapper);
+            const decoded = decodeHtml(item.data?.content || "");
+            const container = document.getElementById("offerContainer");
+            const tempDiv = document.createElement("div");
+            tempDiv.innerHTML = decoded;
+            [...tempDiv.children].forEach(child => {
+               if (child.classList.contains("offer-item")) {
+                  container.appendChild(child);
+    	       }
+  	   });
 	});
 
         }).catch(err => {
