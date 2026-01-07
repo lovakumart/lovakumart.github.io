@@ -60,7 +60,9 @@ function sendWeatherDataToAEP() {
           const offerDiv = document.getElementById("offerContainer");
           offerDiv.innerHTML = "";
 
+	  console.log("Response : ", response);
 	  console.log("Number of offers:", allOffers.length);
+	console.log("allOffers : ", allOffers);
 
           if (!allOffers.length) {
             offerDiv.innerHTML = "<p>No offers returned.</p>";
@@ -68,7 +70,6 @@ function sendWeatherDataToAEP() {
           }
 
 	allOffers.forEach(item => {
-	  console.log("Text 3:", item._delta?.offerDetails?.offerText);
 	  const html = item._delta?.offerDetails?.offerText || "";
 	  const decoded = decodeHtml(html);
 
